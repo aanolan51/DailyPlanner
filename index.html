@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous" />
+      <link rel="preconnect" href="https://fonts.gstatic.com"/>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Waiting+for+the+Sunrise&display=swap" 
+      rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Gafata&family=Montserrat:wght@300&family=Waiting+for+the+Sunrise&display=swap" 
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <hr class="my-4">
+      <div id = "date">
+        <p id="currentDay" class="lead"></p>
+      </div>
+      <div>
+        <p id="currentTime" class="lead"></p>
+      </div>
+    </header>
+    <div class = "container-fluid">
+      <div class = "row justify-content-between">
+        <ul class="list-group list-group-horizontal" id="colorKey">
+          <li class="list-group-item past">Already Happened</li>
+          <li class="list-group-item present">Going on Now</li>
+          <li class="list-group-item future">Coming Up</li>
+        </ul>
+
+        <button type = "button" class = "btn btn-info" id = "addItem" data-toggle="modal" data-target="#eventModal">
+          <span class="far fa-calendar-check"></span> ADD ITEM</button>
+      </div>
+    </div>
+    <div>
+      <button type = "button" id= "clearButton"><i class="far fa-calendar-times"></i> Clear Schedule</button>
+    </div>
+    
+    <div class = "container">
+          <!-- Timeblocks go here -->
+          
+          <table>
+            <thead>
+              <tr>
+                <th scope="col" class = "tableEvent"><i class="fas fa-angle-double-right"></i> Time
+                  <i class="fas fa-angle-double-left"></th>
+                <th scope="col" class = "tableEvent"> <i class="fas fa-angle-double-right"></i> Schedule
+                  <i class="fas fa-angle-double-left"></i></th>
+                
+              </tr>
+            </thead>
+    
+            <tbody>
+              <tr>
+                <th scope="row" class = "time-block">07:00</th>
+                <td class = 'rows description' id = "0700"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block half-hour">07:30</th>
+                <td class = 'rows description' id = "0730"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block">08:00</th>
+                <td class = 'rows description' id = "0800"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block half-hour">08:30</th>
+                <td class = 'rows description' id = "0830"></td> 
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block">09:00</th>
+                <td class = 'rows description' id = "0900"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block half-hour">09:30</th>
+                <td class = 'rows description' id = "0930"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block">10:00</th>
+                <td class = 'rows description' id = "1000"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block half-hour">10:30</th>
+                <td class = 'rows description' id = "1030"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block">11:00</th>
+                <td class = 'rows description' id = "1100"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block half-hour">11:30</th>
+                <td class = 'rows description' id = "1130"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block">12:00</th>
+                <td class = 'rows description' id = "1200"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block half-hour">12:30</th>
+                <td class = 'rows description' id = "1230"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block">13:00</th>
+                <td class = 'rows description' id = "1300"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block half-hour">13:30</th>
+                <td class = 'rows description' id = "1330"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block">14:00</th>
+                <td class = 'rows description'id = "1400"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block half-hour">14:30</th>
+                <td class = 'rows description' id = "1430"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block">15:00</th>
+                <td class = 'rows description' id = "1500"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block half-hour">15:30</th>
+                <td class = 'rows description' id = "1530"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block">16:00</th>
+                <td class = 'rows description' id = "1600"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block half-hour">16:30</th>
+                <td class = 'rows description'id = "1630"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block">17:00</th>
+                <td class = 'rows description' id = "1700"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block half-hour">17:30</th>
+                <td class = 'rows description' id = "1730"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block">18:00</th>
+                <td class = 'rows description' id = "1800"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row" class = "time-block half-hour">18:30</th>
+                <td class = 'rows description' id = "1830"></td>
+              </tr>
+            </tbody>
+    
+          </table>
+    </div>
+
+
+
+    <!--Modal Form for scheduling input-->
+    <div class="modal fade" tabindex="-1" id = "eventModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">New Event</h5>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id = "newEventForm">
+              <div class="form-group" id = 'event'>
+                <label for="eventText" class="col-form-label">Event Description:</label>
+                <input type="text" class="form-control" id="eventText">
+              </div>
+
+              <label for="startTimes" class = "col-form-label">Start Time:</label>
+              <select class="form-control" id="startTimes">
+                <option id = "01">0700</option>
+                <option >0730</option>
+                <option >0800</option>
+                <option >0830</option>
+                <option >0900</option>
+                <option >0930</option>
+                <option >1000</option>
+                <option >1030</option>
+                <option >1100</option>
+                <option >1130</option>
+                <option >1200</option>
+                <option >1230</option>
+                <option >1300</option>
+                <option >1330</option>
+                <option >1400</option>
+                <option >1430</option>
+                <option >1500</option>
+                <option >1530</option>
+                <option >1600</option>
+                <option >1630</option>
+                <option >1700</option>
+                <option >1730</option>
+                <option >1800</option>
+                <option >1830</option>
+              </select>
+
+              <label for="startTimes" class = "col-form-label">End Time:</label>
+              <select class="form-control" id="endTimes">
+                <option >0700</option>
+                <option >0730</option>
+                <option >0800</option>
+                <option >0830</option>
+                <option >0900</option>
+                <option >0930</option>
+                <option >1000</option>
+                <option >1030</option>
+                <option >1100</option>
+                <option >1130</option>
+                <option >1200</option>
+                <option >1230</option>
+                <option >1300</option>
+                <option >1330</option>
+                <option >1400</option>
+                <option >1430</option>
+                <option >1500</option>
+                <option >1530</option>
+                <option >1600</option>
+                <option >1630</option>
+                <option >1700</option>
+                <option >1730</option>
+                <option >1800</option>
+                <option >1830</option>
+              </select>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id = "submitButton">Add New Event</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+    <script src= "./script.js"></script>
+  </body>
+</html>

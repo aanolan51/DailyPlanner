@@ -1,0 +1,122 @@
+body {
+    font-size: 16px;
+    line-height: 1;
+    font-family: 'Waiting for the Sunrise', cursive;
+  }
+  
+  textarea {
+    background: transparent;
+    border: none;
+    resize: none;
+    color: #000000;
+    border-left: 1px solid black;
+    padding: 10px;
+  }
+  
+  .jumbotron {
+    text-align: center;
+    background-color: transparent;
+    color: #26272C;
+    border-radius: 0;
+    border-bottom: dotted #26272C;
+  }
+
+ 
+  .description {
+    white-space: pre-wrap;
+  }
+
+  #addItem{
+    color: white;    
+    font-size: 1.5vw;
+    background-color: #5F4554;
+    border-radius: 5px;
+    margin-right: 2%;
+  }
+  
+.tableEvent{
+  padding: 1%;
+  font-size: 1.5vw;
+  color: #474954;
+  text-align: center;
+  font-family: 'Gafata', sans-serif;
+}
+
+table{
+  width: 100%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  }
+
+  .time-block {
+    font-family: monospace;
+    text-align: center;
+    border-bottom: thin dotted #474954;
+    border-top: thin dotted #474954;
+    width: 20%;
+    padding: 1%;
+    font-size: 1.5vw;
+    color: #474954;
+  }
+
+  .half-hour{
+    color: #A9B3CE;
+  }
+  
+  .rows {
+    margin: 1%;
+    font-size: 1.2vw;
+    color:  white;
+    text-align: center;
+    background-color: #A9B3CE;
+    font-family: 'Waiting for the Sunrise', cursive;
+    padding: 0.5%;
+    line-height: 1.5em;
+    border-radius: 5px;
+    border: thin dotted white;
+  }
+
+  #colorKey{
+    margin-left: 2%;
+  }
+  
+  .hour {
+    background-color: #ffffff;
+    color: #000000;
+    border-top: 1px dashed #000000;
+  }
+  
+  .past {
+    background-color: #A9B3CE;
+    color: white;
+    font-size: 1.2vw;
+  }
+  
+  .present {
+    background-color: #7CDEDC;
+    color: #474954;
+    font-size: 1.2vw;
+    font-weight: bold;
+  }
+  
+  .future {
+    background-color: #7284A8;
+    color: white;
+    font-size: 1.2vw;
+  }
+
+  #eventModal{
+    font-family: 'Gafata', sans-serif;
+  }
+
+  #clearButton{
+    background-color: #26272C;
+    color: #ffffff;
+    font-size: 1.2vw;
+    margin-left: 2%;
+  }
+    
+  #clearButton:hover, #addItem:hover{
+    font-size: 2vw;
+    transition: all 0.3s ease-in-out;
+  }
