@@ -8,6 +8,8 @@ In this project, bootstrap and jQuery were used in order to create a table eleme
 ## Usage
 Click on the ADD EVENT button. A modal will appear, with a line for text to input the event description for the schedule, and drop down menus for the start time and end time for the event. Click close at anytime to cancel the modal, or click Add New Event to save the item and render it to your schedule.
 
+Application Link: https://aanolan51.github.io/DailyPlanner/
+
 ## Credits
 1. https://getbootstrap.com/docs/4.0/layout/grid/
 2. https://www.freecodecamp.org/news/the-best-jquery-examples/
