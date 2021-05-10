@@ -142,4 +142,7 @@ table{
     .present, .past, .future{
       font-size: 3vw;
     } 
+    .rows{
+      font-size: 3vw;
+    }
   }
