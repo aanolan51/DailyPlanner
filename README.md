@@ -15,13 +15,7 @@ Application Link: https://aanolan51.github.io/DailyPlanner/
 
 Contact: Alyssa Nolan nolana464@gmail.com
 
-Technologies Used:
-HTML
-CSS
-Bootstrap
-FontAwesome
-Google Fonts
-JavaScript
+Technologies Used: HTML, CSS, Bootstrap, FontAwesome, Google Fonts, and JavaScript
 
 ## Credits
 1. https://getbootstrap.com/docs/4.0/layout/grid/
