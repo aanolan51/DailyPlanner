@@ -151,6 +151,12 @@ table{
     .tableEvent{
       font-size: 3vw;
     }
+    #currentDay{
+      font-size: 5vw;
+    }
+    #currentTime{
+      font-size: 5vw;
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -174,7 +180,7 @@ table{
     }
     .tableEvent{
       font-size: 3.5vw;
-    }
+    }    
   }
 
   @media screen and (max-width: 460px) {
