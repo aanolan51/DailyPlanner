@@ -138,5 +138,8 @@ table{
     }
     #addItem{   
       font-size: 3.5vw;
-    }   
+    }  
+    .present, .past, .future{
+      font-size: 3vw;
+    } 
   }
