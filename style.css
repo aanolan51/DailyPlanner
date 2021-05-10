@@ -20,6 +20,9 @@ body {
     border-radius: 0;
     border-bottom: dotted #26272C;
   }
+  #title{
+    font-size: 6vw;
+  }
 
  
   .description {
