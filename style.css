@@ -152,3 +152,9 @@ table{
       font-size: 3.5vw;
     }
   }
+
+  @media screen and (max-width: 460px) {
+    #addItem{   
+      margin-left: 70%;
+    }  
+  }
