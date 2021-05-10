@@ -128,3 +128,15 @@ table{
     font-size: 2vw;
     transition: all 0.3s ease-in-out;
   }
+
+  @media screen and (max-width: 768px) {
+    #clearButton{
+      font-size: 3vw;
+    }
+    #clearButton:hover, #addItem:hover{
+      font-size: 4vw;
+    }
+    #addItem{   
+      font-size: 3.5vw;
+    }   
+  }
