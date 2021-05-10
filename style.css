@@ -23,7 +23,12 @@ body {
   #title{
     font-size: 6vw;
   }
-
+  #currentDay{
+    font-size: 3vw;
+  }
+  #currentTime{
+    font-size: 3vw;
+  }
  
   .description {
     white-space: pre-wrap;
