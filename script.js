@@ -1,6 +1,5 @@
 //Set global variable to be used:
 var currentDay;
-var currentTime;
 var now = moment(); //Load in the full moment function
 var hour = now.format("HH00"); //Add zeros to the end
 var hourThirty = now.format("HH30");
@@ -18,11 +17,8 @@ var clearButton = $("#clearButton");
 //Use the moment function to create the current day and current time text content for the heading:
 currentDay = setInterval(function () {
     $("#currentDay").text(now.format("dddd, MMMM Do YYYY"));
+    $("#currentTime").text(now.format("HH:mm"));
   }, 1000);
-
-currentTime = setInterval(function () {
-$("#currentTime").text(now.format("HH:mm"));
-}, 1000);
 
 
 //For loop to interate through each TD element by their specific ID, compare that ID value to the current 
