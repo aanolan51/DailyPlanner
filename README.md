@@ -13,6 +13,8 @@ Click on the ADD EVENT button. A modal will appear, with a line for text to inpu
 
 Application Link: https://aanolan51.github.io/DailyPlanner/
 
+Contact: Alyssa Nolan nolana464@gmail.com
+
 ## Credits
 1. https://getbootstrap.com/docs/4.0/layout/grid/
 2. https://www.freecodecamp.org/news/the-best-jquery-examples/
